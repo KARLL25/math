@@ -1,4 +1,4 @@
-pos = 1.0e-10
+EPS = 1.0e-10
 
 def solo_matr(mat):
     mat1 = [[0 for i in range(len(mat))] for j in range(len(mat))]
@@ -33,7 +33,7 @@ def inverse_mat(m1, m2):
     pm = plus_mat(m1, m2)
     f = len(pm)
     for k in range(f):
-        if abs(pm[k][k]) < pos:
+        if abs(pm[k][k]) < EPS:
             for i in range(k+1, f):
                 if abs(pm[i][k]) > abs(pm[k][k]):
                     for j in range(k, 2*f):
