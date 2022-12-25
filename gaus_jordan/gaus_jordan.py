@@ -1,9 +1,9 @@
-sla = 1.0e-10
+EPS = 1.0e-10
 
 def gaus(a, b):
     m = len(b)
     for l in range(m):
-        if abs(a[l][l]) < sla:
+        if abs(a[l][l]) < EPS:
             for i in range(l+1, m):
                 if abs(a[i][l]) > abs(a[l][l]):
                     for j in range(l,m):
